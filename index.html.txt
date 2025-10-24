@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finanzas ULIMA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img id="ulimaLogo" src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Universidad_de_Lima_logo.svg" alt="Universidad de Lima logo">
+      <h1>Gestión Financiera ULIMA</h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="dashboard">
+      <h2>Panel de Control</h2>
+
+      <div class="buttons">
+        <button onclick="showSection('todos')">Todos</button>
+        <button onclick="showSection('ingresos')">Ingresos</button>
+        <button onclick="showSection('gastos')">Gastos</button>
+      </div>
+
+      <div class="resumen">
+        <div class="card ingresos">
+          <h3>Ingresos</h3>
+          <p id="ingresosTotal">S/ 0</p>
+        </div>
+        <div class="card gastos">
+          <h3>Gastos</h3>
+          <p id="gastosTotal">S/ 0</p>
+        </div>
+        <div class="card balance">
+          <h3>Balance</h3>
+          <p id="balanceTotal">S/ 0</p>
+        </div>
+      </div>
+
+      <div class="registro">
+        <h3>Registrar Movimiento</h3>
+        <input type="text" id="descripcion" placeholder="Descripción">
+        <input type="number" id="monto" placeholder="Monto">
+        <select id="tipo">
+          <option value="ingreso">Ingreso</option>
+          <option value="gasto">Gasto</option>
+        </select>
+        <button onclick="agregarMovimiento()">Agregar</button>
+      </div>
+
+      <div class="lista" id="listaMovimientos"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Universidad de Lima - Proyecto académico</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
